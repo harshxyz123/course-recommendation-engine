@@ -31,6 +31,9 @@ plt.show()
 popular_courses = courses.groupby('id')['ratings'].mean().sort_values(ascending=False)
 print("\n Popular courses based on average rating: \n",popular_courses)
 
+# Next steps:
+# collaborative filtering for personalized recommendations
+
 #popularity check based on watch time
 popular_courses_watch_time = interactions.groupby('course_id')['watch_time'].sum().sort_values(ascending=False)
 print("\n Popular courses based on total watch time: \n",popular_courses_watch_time)
